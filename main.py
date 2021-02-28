@@ -1,0 +1,14 @@
+import requests
+import json
+from pprint import pprint
+token='1686179341:AAGdBt0VQv_cicZ6m1GvFAhNVF0ipaX2bm0'
+url=f'https://api.telegram.org/bot{token}/getUpdates'
+r=requests.get(url)
+data=r.json()
+updates=data['result']
+
+
+update=updates[0]
+massage=update['message']
+user=massage['from']
+pprint(user)
