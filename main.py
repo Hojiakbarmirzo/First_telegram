@@ -8,7 +8,7 @@ data=r.json()
 updates=data['result']
 
 
-update=updates[0]
-massage=update['message']
-user=massage['from']
-pprint(user)
+for update in updates:
+    massage=update['message']
+    user=massage['from']
+    pprint(user)
