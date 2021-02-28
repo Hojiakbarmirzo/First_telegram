@@ -11,6 +11,6 @@ updates=data['result']
 for update in updates:
     massage=update['message']
     user=massage['from']
-    first_name=user['first_name']
-    # last_name=user['last_name']
-    print(first_name)
+    first_name=user.get('first_name','')
+    last_name=user.get('last_name','')
+    print(f'{first_name} {last_name}')
