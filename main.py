@@ -11,4 +11,6 @@ updates=data['result']
 for update in updates:
     massage=update['message']
     user=massage['from']
-    pprint(user)
+    first_name=user['first_name']
+    # last_name=user['last_name']
+    print(first_name)
